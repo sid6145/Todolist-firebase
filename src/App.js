@@ -4,6 +4,7 @@ import firebase from "firebase";
 import { db } from "./firebase-config";
 import { useEffect, useState } from "react";
 import Todolist from "./Todolist";
+import Footer from './footer'
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -45,6 +46,7 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          minHeight: "100vh"
         }}
       >
         <Typography style={{padding:"50px 0", color:"#82A2B4 "}} variant="h4">TODOLIST</Typography>
@@ -62,7 +64,7 @@ function App() {
             id="standard-basic"
             label="Add an item"
           />
-          <Button onClick={addTodo} variant="contained">
+          <Button onClick={addTodo} variant="outlined">
             +
           </Button>
         </div>
@@ -75,6 +77,8 @@ function App() {
           />
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 }
