@@ -1,14 +1,39 @@
-import React from 'react'
-import { ListItemText} from '@material-ui/core'
+import React from "react";
+import { Button, ListItem, ListItemText } from "@material-ui/core";
+import './todolist.css'
+import { db } from "./firebase-config";
 
-export default function Todolist(props) {
+function Todolist({todoitem, id, inprogress}) {
+  
+  const toggleInprogress = () =>{
+      db.collection("todo").doc(id).update({
+          inprogress: !inprogress,
+      });
+  }
+  
+  const deleteItem = () => {
+      db.collection("todo").doc(id).delete()
+  }
+  
+   
+  
     return (
-    <div style={{display:"flex", height:"50px"}}>
-         <ListItemText primary={props.todoitem} secondary={props.inprogress ? "in progress" : "completed"} />
-        <button>done</button>
-        <button>x</button>
+    <div className={inprogress ? "blue" : "red"} style={{ display: "flex", marginTop: "10px", justifyContent:"space-around", width:"30%" }}>
+      <ListItem >
+        <ListItemText
+          primary={todoitem}
+          secondary={inprogress ? "in progress" : "completed"}
+        />
+      </ListItem>
+
+      <Button className={inprogress ? "" : "done"} onClick={toggleInprogress}>
+        {inprogress ? "Done" : "Undone"}
+        
+      </Button>
+      <Button className={inprogress ? "" : "delete"} onClick={deleteItem}>x</Button>
     </div>
-      
-      
-    )
+  );
 }
+
+
+export default Todolist

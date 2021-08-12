@@ -1,5 +1,5 @@
 import "./App.css";
-import { Button, List, ListItem, TextField } from "@material-ui/core";
+import { Button, List, ListItem, TextField, Typography } from "@material-ui/core";
 import firebase from "firebase";
 import { db } from "./firebase-config";
 import { useEffect, useState } from "react";
@@ -10,7 +10,7 @@ function App() {
   const [todolist, setTodolist] = useState([]);
 
   useEffect(() => {
-      getTodo()
+    getTodo();
   }, []);
 
   const addTodo = () => {
@@ -47,7 +47,7 @@ function App() {
           flexDirection: "column",
         }}
       >
-        <h3>TodoList</h3>
+        <Typography style={{padding:"50px 0", color:"#82A2B4 "}} variant="h4">TODOLIST</Typography>
         <div
           style={{
             display: "flex",
@@ -67,20 +67,14 @@ function App() {
           </Button>
         </div>
 
-      
         {todolist.map((item) => (
-    
-          <Todolist todoitem={item.todo} inprogress={item.inprogress}/>
-    
-      ))}
-     
+          <Todolist
+            todoitem={item.todo}
+            inprogress={item.inprogress}
+            id={item.id}
+          />
+        ))}
       </div>
-          
-
-  
-     
-
-     
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.red{
+    background-color: rgb(236, 74, 74);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+}
+
+.blue{
+    background-color: rgb(231, 237, 241);
+    color: black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+}
+
+.done{
+    color: white;
+}
+
+.delete{
+    color: white;
+}
