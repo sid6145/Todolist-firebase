@@ -18,7 +18,7 @@ function Todolist({todoitem, id, inprogress}) {
    
   
     return (
-    <div className={inprogress ? "blue" : "red"} style={{ display: "flex", marginTop: "10px", justifyContent:"space-around", width:"30%" }}>
+    <div className={inprogress ? "blue" : "red"} style={{ display: "flex", marginTop: "10px", justifyContent:"space-around",  }}>
       <ListItem >
         <ListItemText
           primary={todoitem}

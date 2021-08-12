@@ -3,6 +3,7 @@
     color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px black;
+    min-width: 300px;
 }
 
 .blue{
@@ -10,6 +11,8 @@
     color: black;
     border-radius: 5px;
     box-shadow: 1px 1px 3px black;
+    min-width: 300px;
+
 }
 
 .done{

@@ -43,7 +43,6 @@ function App() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
           minHeight: "100vh"
@@ -60,11 +59,11 @@ function App() {
           <TextField
             value={todo}
             onChange={(e) => setTodo(e.target.value)}
-            style={{ width: "20vw", minWidth: "300px" }}
+            style={{ width: "20vw", minWidth: "250px",  }}
             id="standard-basic"
             label="Add an item"
           />
-          <Button onClick={addTodo} variant="outlined">
+          <Button style={{marginLeft:"3px"}} onClick={addTodo} variant="outlined">
             +
           </Button>
         </div>
