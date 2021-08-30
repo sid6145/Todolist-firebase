@@ -1,24 +1,22 @@
-.red{
-    background-color: rgb(236, 74, 74);
+.completed{
+    background-color: rgb(29, 226, 72);
     color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px black;
-    min-width: 300px;
 }
 
-.blue{
-    background-color: rgb(231, 237, 241);
+.inprogress{
+    background-color: rgb(233, 229, 229);
     color: black;
     border-radius: 5px;
     box-shadow: 1px 1px 3px black;
-    min-width: 300px;
-
 }
 
 .done{
     color: white;
 }
 
-.delete{
-    color: white;
+.list-item{
+    min-width: 250px;
+    max-width: 300px;
 }

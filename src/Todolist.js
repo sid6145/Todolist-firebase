@@ -18,8 +18,8 @@ function Todolist({todoitem, id, inprogress}) {
    
   
     return (
-    <div className={inprogress ? "blue" : "red"} style={{ display: "flex", marginTop: "10px", justifyContent:"space-around",  }}>
-      <ListItem >
+    <div className={inprogress ? "inprogress" : "completed"} style={{ display: "flex", marginTop: "10px", justifyContent:"space-around",  }}>
+      <ListItem className="list-item">
         <ListItemText
           primary={todoitem}
           secondary={inprogress ? "in progress" : "completed"}
@@ -30,7 +30,7 @@ function Todolist({todoitem, id, inprogress}) {
         {inprogress ? "Done" : "Undone"}
         
       </Button>
-      <Button className={inprogress ? "" : "delete"} onClick={deleteItem}>x</Button>
+      <Button className="delete" onClick={deleteItem}>x</Button>
     </div>
   );
 }

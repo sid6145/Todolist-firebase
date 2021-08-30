@@ -63,7 +63,7 @@ function App() {
             id="standard-basic"
             label="Add an item"
           />
-          <Button style={{marginLeft:"3px"}} onClick={addTodo} variant="outlined">
+          <Button className="add-btn" style={{marginLeft:"3px"}} onClick={addTodo} variant="outlined">
             +
           </Button>
         </div>
