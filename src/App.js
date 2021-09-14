@@ -48,7 +48,7 @@ function App() {
           minHeight: "100vh"
         }}
       >
-        <Typography style={{padding:"50px 0", color:"#82A2B4 "}} variant="h4">TODOLIST</Typography>
+        <Typography style={{padding:"50px 0", color:"#1d3557"}} variant="h4">TODOLIST</Typography>
         <div
           style={{
             display: "flex",

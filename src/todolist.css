@@ -1,12 +1,12 @@
 .completed{
-    background-color: rgb(29, 226, 72);
+    background-color: #64cf58;
     color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px black;
 }
 
 .inprogress{
-    background-color: rgb(233, 229, 229);
+    background-color: #f1faee;
     color: black;
     border-radius: 5px;
     box-shadow: 1px 1px 3px black;
